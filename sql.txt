@@ -1,0 +1,10 @@
+---
+- hosts: database
+  tasks:
+    - name: 1. Install MySQL
+      apt: name=mysql-server state=present
+
+    - name: 2. Move file for database
+      copy:
+       src: ~/virtualke/db.sql
+       dest: ~/
