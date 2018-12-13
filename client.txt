@@ -1,0 +1,10 @@
+- name: Configure client 
+  hosts: client
+  sudo: True
+  tasks:
+   - name: Install arora     
+     apt: name=arora update_cache=yes
+   - name: Install KDE
+     apt: name=kde-standard state=present install_recommends=yes
+   - user: name=client comment="My Client" 
+           password='$6$v7INeW5s7YYCBvmw$oW2vTP1g6/klDUpAXGAz.OXBVibWjQM1/Quz7Hox/CpWMdBkMRyDTws7n465xvcfMxOHVe1Zbly4Yz/N5Cw2/0'

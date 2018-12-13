@@ -1,0 +1,14 @@
+---
+- hosts: database
+  remote_user: root
+
+  tasks:
+
+    - name: Create database user
+      mysql_user: user=root password=root priv=*.*:ALL state=present
+
+    - name: Create database
+      mysql_db: db=bobdata state=present
+
+    - name: Ensure no user named 'root' exists and delete if found.
+      mysql_user: user=root state=absent

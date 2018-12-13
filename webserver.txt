@@ -1,0 +1,17 @@
+
+---
+- hosts: webserver
+  tasks:
+    - name: 1. Install Tomcat
+      apt: name=tomcat8 state=present
+    - name: 2.  Delete ROOT folder content
+      shell: /bin/rm -rf /var/lib/tomcat8/webapps/ROOT/*
+    - name: 3. Move file for the webpage
+      copy:
+       src: ~/virtualke
+       dest: /var/lib/tomcat8/webapps/ROOT/
+    - name: 4. Restart tomcat
+      shell: '/etc/init.d/tomcat8 restart'
+
+
+
