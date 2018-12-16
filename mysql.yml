@@ -2,11 +2,9 @@
 - hosts: database
   sudo: True
   tasks:
-    - name: 1. Install MySQL python module
-      apt: name=mysql-python state=present
-    - name: 2. Install MySQL server
+    - name: 1. Install MySQL server
       apt: name=mysql-server state=present
-    - name: 3. Move file for database
+    - name: 2. Move file for database
       copy:
        src: ~/virtualke/db.sql
        dest: ~/
