@@ -1,6 +1,6 @@
 ---
 - hosts: database
-  sudo=True
+  sudo: True
   tasks:
     - name: 1. Install MySQL python module
       apt: name=mysql-python state=present
