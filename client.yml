@@ -7,4 +7,4 @@
    - name: Install lxde
      apt: name=lxde state=present install_recommends=yes
    - user: name=client comment="My Client" 
-           password='client'
+           password='$6$v7INeW5s7YYCBvmw$oW2vTP1g6/klDUpAXGAz.OXBVibWjQM1/Quz7Hox/CpWMdBkMRyDTws7n465xvcfMxOHVe1Zbly4Yz/N5Cw2/0'
