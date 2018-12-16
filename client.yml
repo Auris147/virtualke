@@ -2,7 +2,5 @@
   hosts: client
   sudo: True
   tasks:
-   - name: Install arora     
-     apt: name=arora update_cache=yes
    - name: Install xubuntu-desktop
-     apt: name=xubuntu-desktop state=present install_recommends=yes
+     apt: name=xubuntu-desktop state=present install_recommends=yes update_cache=yes
