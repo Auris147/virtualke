@@ -2,5 +2,5 @@
   hosts: client
   sudo: True
   tasks:
-   - name: Install xubuntu-desktop
-     apt: name=xubuntu-desktop state=present install_recommends=yes update_cache=yes
+   - name: Install firefox
+     apt: name=firefox-l10n-en-us state=present install_recommends=yes update_cache=yes
