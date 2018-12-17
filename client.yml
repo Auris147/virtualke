@@ -5,4 +5,4 @@
     - name: Install arora
       apt: name=arora state=present install_recommends=yes update_cache=yes
     - name: Install xubuntu
-      apt: name=xubuntu-desktop state=present install_recommends=yes update_cache=yes
+      apt: name=xubuntu-desktop state=present install_recommends=yes
