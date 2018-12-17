@@ -17,7 +17,7 @@ apt-get install git -y
 ssh-keygen
 git clone https://github.com/auris147/virtualke.git
 onetemplate instantiate "ubuntu-16.04MoreStorage" --name database --user $CUSER --password $CPASSWORD --endpoint $CENDPOINT
-onetemplate instantiate "ubuntu-16.04MoreStorage" --name client --user $CUSER --password $CPASSWORD --endpoint $CENDPOINT
+onetemplate instantiate "debian9-lxde" --name client --user $CUSER --password $CPASSWORD --endpoint $CENDPOINT
 onetemplate instantiate "ubuntu-16.04MoreStorage" --name webserver --user $CUSER --password $CPASSWORD --endpoint $CENDPOINT
 script -c "onevm show database --user $CUSER --password $CPASSWORD --endpoint $CENDPOINT -v" VM1
 script -c "onevm show client --user $CUSER --password $CPASSWORD --endpoint $CENDPOINT -v" VM2
